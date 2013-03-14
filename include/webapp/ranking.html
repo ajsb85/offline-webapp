@@ -1,0 +1,67 @@
+<html>
+    <head>
+        <title>Minesweeper - The Open Web HTML5 Game!</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1"> 
+
+        <script src="scripts/jquery.js" ></script>
+        <script src="scripts/common.js" ></script>
+        <script src="scripts/jquery.mobile-1.2.0.js" ></script>
+        <script src="scripts/Ranking.js" ></script>
+        <link rel="stylesheet" href="style/jquery.mobile-1.2.0.css" type="text/css" />
+
+    </head>
+    <body>
+
+        <div data-role="page" data-theme="c">
+
+            <div data-role="header" >
+                <a href="index.html" data-icon="home">Home</a>
+                <h1>Hall of Fame</h1>
+            </div><!-- /header -->
+
+            <div data-role="content">	
+
+                <h4>Top Scores</h4>
+                <ul id="rankList" data-role="listview"></ul>
+
+                <br />
+                <a href="#" id="clearBtn" data-role="button" data-inline="true" data-icon="delete" data-theme="b" >Clear all</a>
+
+            </div><!-- /content -->
+
+
+
+        </div><!-- /page -->
+
+
+        <script>
+            // Populate top-score listview
+            var rankOb = new Ranking();
+            var allData = rankOb.getAll();
+            var markup = '';
+            if(allData){
+                for(var i=0; i<allData.length; i++){
+                    markup += '<li>' + allData[i].playerName + '<span class="ui-li-count">' + allData[i].numMines
+                        + 'mines, ' + allData[i].penalty.toFixed(2) + ' penalty</span>' + '</li>';
+                }
+            }else{
+                markup = '<li>No record found</li>';
+                // Also disable the button
+                $('#clearBtn').addClass('ui-disabled');
+            }
+            $('#rankList').html(markup);
+            
+            // Event Binding
+            $('#clearBtn').tap(function(event){
+                console.log('clr btn clicked');
+                if(confirm('Are you sure to clear all data? This can not be undone.')){
+                    localStorage.removeItem(rankOb.storageKey);
+                    window.location.reload();
+                }
+            });
+        </script>
+
+
+    </body>
+</html>

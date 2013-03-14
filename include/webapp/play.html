@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html manifest="mines.appcache">
+    <head>
+        <title>Minesweeper</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1"> 
+
+        <script src="scripts/jquery.js" ></script>
+        <script src="scripts/common.js" ></script>
+        <script src="scripts/jquery.stopwatch.js" ></script>
+        <script src="scripts/jquery.mobile-1.2.0.js" ></script>
+        
+
+
+        <link rel="stylesheet" href="style/reset.css" type="text/css" />
+        <link rel="stylesheet" href="style/style.css" type="text/css" />
+        <link rel="stylesheet" href="style/jquery.mobile-1.2.0.css" type="text/css" />
+
+    </head>
+    <body>
+        <div id="map-wrapper">
+            <div id="map"></div>
+        </div>
+
+
+
+        <div id="status">Idle</div>
+
+        <div data-role="popup" id="myPopup" class="ui-content" data-theme="e" style="max-width:350px;">
+            There will be something interesting here!
+        </div>
+
+        <div id="dashboard" class="">
+
+            <span class="dashboardBtn" id="menuBtn">
+                Home
+            </span>
+            &nbsp;
+            <span class="dashboardBtn" id="newGameBtn">ReStart</span>
+
+            <span id="flag">
+                <span id="flagUsed">0</span> / <span id="flagAvailable"></span>
+            </span> 
+            <div class="">
+                <div id="clock" ></div>
+            </div>
+
+        </div>
+
+
+
+        <!--    Scripts     -->
+        <script src="scripts/Ranking.js" ></script>
+        <script src="scripts/Minesweeper.js" ></script>
+        <script src="scripts/play.js" ></script>
+    </body>
+</html>

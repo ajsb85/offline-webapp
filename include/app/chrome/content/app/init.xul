@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+
+<!DOCTYPE overlay [
+	<!ENTITY % globalDTD SYSTEM "chrome://global/locale/global.dtd"> %globalDTD;
+	<!ENTITY % zoteroDTD SYSTEM "chrome://app/locale/app.dtd"> %zoteroDTD;
+	<!ENTITY % dialogOverlayDTD SYSTEM "chrome://global/locale/dialogOverlay.dtd"> %dialogOverlayDTD;
+]>
+
+<overlay id="include"
+	xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul">
+	
+	<script src="init.js"/>
+
+</overlay>
+

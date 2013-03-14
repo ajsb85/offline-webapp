@@ -1,0 +1,33 @@
+CACHE MANIFEST
+# v1 - 2012-12-09
+
+# HTML Pages
+index.html
+play.html
+help.html
+bug.html
+about.html
+ranking.html
+
+# JavaScripts
+scripts/jquery.js
+scripts/common.js
+scripts/jquery.stopwatch.js
+scripts/jquery.mobile-1.2.0.js
+scripts/Minesweeper.js
+scripts/Ranking.js
+scripts/play.js
+
+#CSS
+style/reset.css
+style/style.css
+style/jquery.mobile-1.2.0.css
+
+#Other Assets
+style/img/board.jpg
+style/img/Bomb.png
+style/images/ajax-loader.gif
+style/images/icons-18-black.png
+style/images/icons-18-white.png
+style/images/icons-36-black.png
+style/images/icons-36-white.png
